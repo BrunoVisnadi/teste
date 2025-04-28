@@ -69,35 +69,18 @@ QUESTIONS = [
                 'Moções “EC lamenta X” sempre exigem uma análise retrospectiva de como seria o mundo se determinado fato não tivesse ocorrido',
                 'Na moção “EC prefere um mundo em que o Brasil sempre foi governado pela esquerda política”, as oposições não podem defender um mundo em que o Brasil sempre tenha sido governado pela direita política',
                 'Moções que iniciam com “EC celebra” impõem às bancadas de governo exatamente o mesmo ônus que moções de “EC apoia”',
+                'Na moção “ECAQ os EUA deveriam intervir no Oriente Médio”, o primeiro governo pode estabelecer um modelo de como, exatamente, a intervenção será realizada',
                 'Na moção “EC prefere um mundo em que movimentos sociais priorizem abordagens conciliatórias sobre abordagens combativas", o primeiro-ministro pode delimitar, por exemplo, situações de exceção nas quais abordagens combativas ainda serão utilizadas',
                 "Em moções de policy, a primeira oposição está autorizada a apresentar qualquer contraproposta, que será vinculativa ao resto do debate, desde que exija uma quantidade de recursos comparáveis com os da Policy apresentada pelo Primeiro Governo",
                 "Em moções “EC lamenta X” deve-se sopesar os impactos positivos e negativos ao mundo causados diretamente por X.",
                 'Na moção "ECAQ países em desenvolvimento deveriam priorizar políticas sociais a de políticas de classe", a 1O pode propor que tais países deem igual atenção às políticas sociais e de classe',
-                'Na moção “ECAQ os EUA deveriam intervir no Oriente Médio”, o primeiro governo pode estabelecer um modelo de como, exatamente, a intervenção será realizada'
+
             ],
         "answer": [
             'Moções “EC lamenta X” sempre exigem uma análise retrospectiva de como seria o mundo se determinado fato não tivesse ocorrido',
             'Na moção “EC prefere um mundo em que o Brasil sempre foi governado pela esquerda política”, as oposições não podem defender um mundo em que o Brasil sempre tenha sido governado pela direita política',
             'Moções que iniciam com “EC celebra” impõem às bancadas de governo exatamente o mesmo ônus que moções de “EC apoia”',
             'Na moção “EC prefere um mundo em que movimentos sociais priorizem abordagens conciliatórias sobre abordagens combativas", o primeiro-ministro pode delimitar, por exemplo, situações de exceção nas quais abordagens combativas ainda serão utilizadas',
-        ]
-    },
-    {
-        "question": "Selecione as alternativas verdadeiras referentes a tipos de moção.",
-        "choices":
-            [
-                'Moções “EC lamenta X” sempre exigem uma análise retrospectiva de como seria o mundo se determinado fato não tivesse ocorrido',
-                'Na moção “EC prefere um mundo em que o Brasil sempre foi governado pela esquerda política”, as oposições não podem defender um mundo em que o Brasil sempre tenha sido governado pela direita política',
-                'Moções que iniciam com “EC celebra” impõem às bancadas de governo exatamente o mesmo ônus que moções de “EC apoia”',
-                'Na moção “ECAQ os EUA deveriam intervir no Oriente Médio”, o primeiro governo pode estabelecer um modelo de como, exatamente, a intervenção será realizada',
-                "Em moções de policy, a primeira oposição está autorizada a apresentar qualquer contraproposta, que será vinculativa ao resto do debate, desde que exija uma quantidade de recursos comparáveis com os da Policy apresentada pelo Primeiro Governo",
-                "Em moções “EC lamenta X” deve-se sopesar os impactos positivos e negativos ao mundo causados diretamente por X.",
-                'Na moção "ECAQ países em desenvolvimento deveriam priorizar políticas sociais a de políticas de classe", a 1O pode propor que tais países deem igual atenção às políticas sociais e de classe',
-            ],
-        "answer": [
-            'Moções “EC lamenta X” sempre exigem uma análise retrospectiva de como seria o mundo se determinado fato não tivesse ocorrido',
-            'Na moção “EC prefere um mundo em que o Brasil sempre foi governado pela esquerda política”, as oposições não podem defender um mundo em que o Brasil sempre tenha sido governado pela direita política',
-            'Moções que iniciam com “EC celebra” impõem às bancadas de governo exatamente o mesmo ônus que moções de “EC apoia”',
             'Na moção “ECAQ os EUA deveriam intervir no Oriente Médio”, o primeiro governo pode estabelecer um modelo de como, exatamente, a intervenção será realizada'
         ]
     },
