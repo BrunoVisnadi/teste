@@ -8,7 +8,7 @@ import psycopg2
 
 
 def get_connection():
-    return psycopg2.connect("postgresql://db_user:5Uvb9zTvYJqk0rotHKMiOV0kEq7vvT16@dpg-d073hok9c44c739lgtjg-a/db_name_7q54") # it is OK to hardcode for this use case
+    return psycopg2.connect("postgresql://test_satl_user:GGNgnEiUEbaMEcCOxxnqOgSthubsU62i@dpg-d3u45l3e5dus739cred0-a/test_satl") # it is OK to hardcode for this use case
 app = Flask(__name__)
 app.secret_key = 'blahh'
 
@@ -227,4 +227,5 @@ def admin_secret():
 
 if __name__ == "__main__":
     app.run()
+
 
