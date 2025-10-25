@@ -12,109 +12,8 @@ def get_connection():
 app = Flask(__name__)
 app.secret_key = 'blahh'
 
-QUESTIONS = [
-    {
-        "question": "Em relação a atribuição de Speaker Points, selecione as alternativas verdadeiras.",
-        "choices":
-            [
-                "O debatedor com a nota de speaker points mais alta pode, no resultado do debate, ficar em 4º lugar",
-                "Um debatedor que discursar por menos de 3 minutos pode ter uma nota mais alta que seus adversários que discursarem por 7 minutos",
-                "A dupla que venceu o debate, necessariamente, precisa ter a soma de speaker points maior do que a de qualquer outra dupla do debate",
-                "Uma resposta falha a um Ponto de Informação implica em uma dedução maior aos speaker points do que se nenhum POI tivesse sido aceito",
-                "Refutações, geralmente, contribuirão menos para os speaker points do que material construtivo",
-                "Os speaker points são uma nota de 0 a 100 atribuída ao desempenho individual de cada debatedor",
-                "Embora sejam notas tecnicamente possíveis, é altamente improvável que um campeonato contenha discursos com notas superiores a 80"
-            ],
-            "answer": [
-                "O debatedor com a nota de speaker points mais alta pode, no resultado do debate, ficar em 4º lugar",
-                "Um debatedor que discursar por menos de 3 minutos pode ter uma nota mais alta que seus adversários que discursarem por 7 minutos",
-                "A dupla que venceu o debate, necessariamente, precisa ter a soma de speaker points maior do que a de qualquer outra dupla do debate",
-            ]
-    },
-    {
-        "question": "Selecione as alternativas verdadeiras referentes às regras gerais do modelo Parlamento Britânico.",
-        "choices":
-            [
-                "Se um debatedor do segundo governo repetir uma análise feita pelo primeiro governo, ainda que a apresente com vocabulário diferente, ela deverá ser completamente desconsiderada",
-                "Um discurso de whip está autorizado a trazer novas refutações, caracterizações e exemplos que fortaleçam o caso de sua extensão",
-                "Um discurso de whip pode receber crédito por expandir e aprimorar linhas de análise trazidas por sua extensão, mas não por fazer o mesmo com linhas de análise trazidas por sua casa alta",
-                "Se um discurso ultrapassar 7 minutos e 15 segundos, o debatedor deve ser imediatamente interrompido pelo presidente da mesa",
-                "Pontos de Informação podem ser oferecidos em qualquer momento, até o 6º minuto de fala de um debatedor da bancada oposta",
-                "Se o Primeiro Governo explica que determinada métrica é importante, e o segundo governo o contradiz explicitamente, argumentando que a dita métrica não é importante, a análise de 2G deve ser desconsiderada por esfaqueamento."
-            ],
-        "answer": [
-            "Se um debatedor do segundo governo repetir uma análise feita pelo primeiro governo, ainda que a apresente com vocabulário diferente, ela deverá ser completamente desconsiderada",
-            "Um discurso de whip está autorizado a trazer novas refutações, caracterizações e exemplos que fortaleçam o caso de sua extensão",
-        ]
-    },
-    {
-        "question": "Selecione as alternativas verdadeiras referentes ao conceito do Eleitor Bem Informado e Inteligente.",
-        "choices":
-            [
-                "O Eleitor possui um conhecimento genérico, mas não profundo, sobre assuntos gerais e atualidades. Ele acompanha os principais portais de notícias e está familiarizado com as manchetes dos maiores jornais",
-                "Apesar de o Eleitor não ter familiaridade com jargões técnicos, como termos econômicos e jurídicos específicos, é possível utilizá-los em um debate para persuadi-lo",
-                'Se uma dupla cometer falácias argumentativas ou saltos lógicos, mas tais falhas não forem apontadas durante o debate, o Eleitor não irá considerar a argumentação como defeituosa',
-                "As opiniões pré-concebidas pelo Eleitor são, a grosso modo, as opiniões médias da população geral",
-                "Oratória e estilos mais sofisticados, tendencialmente, são mais persuasivos e bem creditados pelo Eleitor",
-            ],
-        "answer": [
-            "O Eleitor possui um conhecimento genérico, mas não profundo, sobre assuntos gerais e atualidades. Ele acompanha os principais portais de notícias e está familiarizado com as manchetes dos maiores jornais",
-            "Apesar de o Eleitor não ter familiaridade com jargões técnicos, como termos econômicos e jurídicos específicos, é possível utilizá-los em um debate de modo a persuadi-lo",
-        ]
-    },
-    {
-        "question": "Selecione as alternativas verdadeiras referentes a tipos de moção.",
-        "choices":
-            [
-                'Moções “EC lamenta X” sempre exigem uma análise retrospectiva de como seria o mundo se determinado fato não tivesse ocorrido',
-                'Na moção “EC prefere um mundo em que o Brasil sempre foi governado pela esquerda política”, as oposições não podem defender um mundo em que o Brasil sempre tenha sido governado pela direita política',
-                'Moções que iniciam com “EC celebra” impõem às bancadas de governo exatamente o mesmo ônus que moções de “EC apoia”',
-                'Na moção “ECAQ os EUA deveriam intervir no Oriente Médio”, o primeiro governo pode estabelecer um modelo de como, exatamente, a intervenção será realizada',
-                'Na moção “EC prefere um mundo em que movimentos sociais priorizem abordagens conciliatórias sobre abordagens combativas", o primeiro-ministro pode delimitar, por exemplo, situações de exceção nas quais abordagens combativas ainda serão utilizadas',
-                "Em moções de policy, a primeira oposição está autorizada a apresentar qualquer contraproposta, que será vinculativa ao resto do debate, desde que exija uma quantidade de recursos comparáveis com os da Policy apresentada pelo Primeiro Governo",
-                "Em moções “EC lamenta X” deve-se sopesar os impactos positivos e negativos ao mundo causados diretamente por X.",
-                'Na moção "ECAQ países em desenvolvimento deveriam priorizar políticas sociais a de políticas de classe", a 1O pode propor que tais países deem igual atenção às políticas sociais e de classe',
+QUESTIONS = [{'question': 'Regarding the assignment of Speaker Points, select the true statements.', 'choices': ['T — The team that won the debate must necessarily have a higher total sum of speaker points than any other team in the debate.', 'F — A failed response to a Point of Information implies a greater deduction of speaker points than if no POI had been accepted.', 'T — A speaker who speaks for less than 3 minutes may receive a higher score than opponents who speak for 7 minutes.', 'F — Rebuttals generally contribute less to speaker points than constructive material.', 'F — Speaker points are a score from 0 to 100 assigned to each speaker’s individual performance.', 'F — Although technically possible, it is highly unlikely that a tournament will have speeches with scores above 80.', 'T — The speaker with the highest individual speaker points may still rank 4th in the overall debate result.'], 'answer': ['T — The team that won the debate must necessarily have a higher total sum of speaker points than any other team in the debate.', 'T — A speaker who speaks for less than 3 minutes may receive a higher score than opponents who speak for 7 minutes.', 'T — The speaker with the highest individual speaker points may still rank 4th in the overall debate result.']}, {'question': 'Select the true statements regarding the general rules of the British Parliamentary format.', 'choices': ['T — A whip speech is allowed to introduce new rebuttals, characterizations, and examples that strengthen its extension’s case.', 'F — Points of Information may be offered at any time, up to the 6th minute of a speech from the opposite bench.', 'F — If Opening Government explains that a certain metric is important, and Closing Government explicitly contradicts this by arguing that the metric is unimportant, CG’s analysis must be disregarded for knifing.', 'F — If a speech exceeds 7 minutes and 15 seconds, the speaker must be immediately interrupted by the chair.', 'T — If a speaker from Closing Government repeats an analysis made by Opening Government, even if presented with different wording, it must be completely disregarded.', 'F — A whip speech may receive credit for expanding and improving lines of analysis brought by its own extension, but not for doing the same with lines of analysis from its Opening Half.'], 'answer': ['T — A whip speech is allowed to introduce new rebuttals, characterizations, and examples that strengthen its extension’s case.', 'T — If a speaker from Closing Government repeats an analysis made by Opening Government, even if presented with different wording, it must be completely disregarded.']}, {'question': 'Select the true statements regarding the concept of the Ordinary Intelligent Voter.', 'choices': ['T — The Voter has a general, but not deep, knowledge of current affairs. They follow major news outlets and are familiar with the main headlines.', 'F — If a team commits argumentative fallacies or logical leaps, but such flaws are not pointed out during the debate, the Voter will not consider the argumentation defective.', 'F — Eloquence and sophisticated speaking styles tend to be more persuasive and better rewarded by the Voter.', 'F — The Voter’s preconceived opinions broadly reflect the average opinions of the general population.', 'T — Although the Voter is not familiar with technical jargon, such as specific economic or legal terms, they can still be used in a debate to persuade them.'], 'answer': ['T — The Voter has a general, but not deep, knowledge of current affairs. They follow major news outlets and are familiar with the main headlines.', 'T — Although the Voter is not familiar with technical jargon, such as specific economic or legal terms, they can still be used in a debate to persuade them.']}, {'question': 'Select the true statements regarding types of motions.', 'choices': ['T — In the motion “THP a world where social movements prioritize conciliatory over confrontational approaches,” the Prime Minister may, for example, delimit exceptional situations in which confrontational approaches would still be used.', 'T — “THR X” motions always require a retrospective analysis of how the world would be if that event had not occurred.', 'F — In the motion “THBT developing countries should prioritize social policies over class-based policies,” Opening Government may propose that such countries give equal attention to social and class policies.', 'T — In the motion “THBT the US should intervene in the Middle East,” Opening Government may establish a model specifying how exactly the intervention would occur.', 'T — Motions starting with “TH celebrates” impose on Government benches exactly the same burden as “TH supports” motions.', 'F — In policy motions, Opening Opposition is allowed to propose any countermodel that will bind the rest of the debate, as long as it requires comparable resources to the policy presented by Opening Government.', 'T — In the motion “THP a world where Brazil has always been governed by the political left,” Opposition teams cannot defend a world where Brazil has always been governed by the political right.', 'F — In “THR X” motions, one must weigh the positive and negative impacts caused directly by X.'], 'answer': ['T — In the motion “THP a world where social movements prioritize conciliatory over confrontational approaches,” the Prime Minister may, for example, delimit exceptional situations in which confrontational approaches would still be used.', 'T — “THR X” motions always require a retrospective analysis of how the world would be if that event had not occurred.', 'T — In the motion “THBT the US should intervene in the Middle East,” Opening Government may establish a model specifying how exactly the intervention would occur.', 'T — Motions starting with “TH celebrates” impose on Government benches exactly the same burden as “TH supports” motions.', 'T — In the motion “THP a world where Brazil has always been governed by the political left,” Opposition teams cannot defend a world where Brazil has always been governed by the political right.']}, {'question': 'Select the true statements regarding comparisons between teams.', 'choices': ['T — When comparing Opening Opposition and Closing Government, it may be necessary to consider Opening Government’s speeches to “subtract” repeated material from CG.', 'F — When comparing the Opening halves, it may be necessary to consider, for example, Closing Government’s speeches, if CG presented strong refutations that exposed significant logical flaws in Opening Opposition’s case.', 'F — A competent vertical extension, consisting of relevant and accurate analysis that adds to the Opening Half’s case, can “steal” some points previously introduced. In this case, when comparing teams within that bench, adjudicators should no longer credit those points to the Opening team.', 'F — Once the Deputy Leader of the Opposition finishes, it is always possible to determine the result between the Opening halves.', 'T — Closing Opposition can beat Opening Government even without offering any responses, comparisons, or mentions to OG’s case.', 'F — If a team presents a fully horizontal extension, it must explicitly justify why its metric or impact is more relevant than that of its Opening Half in order to win the bench.'], 'answer': ['T — When comparing Opening Opposition and Closing Government, it may be necessary to consider Opening Government’s speeches to “subtract” repeated material from CG.', 'T — Closing Opposition can beat Opening Government even without offering any responses, comparisons, or mentions to OG’s case.']}]
 
-            ],
-        "answer": [
-            'Moções “EC lamenta X” sempre exigem uma análise retrospectiva de como seria o mundo se determinado fato não tivesse ocorrido',
-            'Na moção “EC prefere um mundo em que o Brasil sempre foi governado pela esquerda política”, as oposições não podem defender um mundo em que o Brasil sempre tenha sido governado pela direita política',
-            'Moções que iniciam com “EC celebra” impõem às bancadas de governo exatamente o mesmo ônus que moções de “EC apoia”',
-            'Na moção “EC prefere um mundo em que movimentos sociais priorizem abordagens conciliatórias sobre abordagens combativas", o primeiro-ministro pode delimitar, por exemplo, situações de exceção nas quais abordagens combativas ainda serão utilizadas',
-            'Na moção “ECAQ os EUA deveriam intervir no Oriente Médio”, o primeiro governo pode estabelecer um modelo de como, exatamente, a intervenção será realizada'
-        ]
-    },
-    {
-        "question": "Selecione as alternativas verdadeiras referentes a comparativas entre duplas.",
-        "choices":
-            [
-                'É possível que a Segunda Oposição vença do Primeiro Governo, mesmo que não apresente nenhuma resposta, comparação, e que nem sequer mencione o caso de 1G em seus discursos',
-                'Na comparativa entre Primeira Oposição e Segundo Governo, pode ser preciso considerar os discursos do Primeiro Governo, para “subtrair” de 2G material repetido',
-                'Uma extensão vertical competente, que consista de análises corretas e relevantes que agreguem ao caso da primeira metade, é capaz de “roubar” alguns dos pontos previamente inaugurados. Nesse cenário, na comparativa entre as duplas desta bancada, os juízes não devem mais considerar para a 1ª casa os pontos “roubados” pela 2ª casa',
-                'Se uma dupla executa uma extensão completamente horizontal, ela precisa, para vencer de sua casa alta, fazer uma comparação explícita justificando que sua métrica ou impacto é mais relevante que o apresentado na primeira metade',
-                "Na comparativa entre as primeiras casas pode-se precisar levar em consideração, por exemplo, os discursos do Segundo Governo, caso a contribuição de 2G tenha apresentado refutações destrutivas e exposto falhas lógicas significativas do caso da Primeira Oposição",
-                'Após o fim do discurso do adjunto da oposição, já é sempre possível determinar qual o resultado da comparativa entre as primeiras metades',
-            ],
-        "answer": [
-            'É possível que a Segunda Oposição vença do Primeiro Governo, mesmo que não apresente nenhuma resposta, comparação, e que nem sequer mencione o caso de 1G em seus discursos',
-            'Na comparativa entre Primeira Oposição e Segundo Governo, pode ser preciso considerar os discursos do Primeiro Governo, para “subtrair” de 2G material repetido',
-        ]
-    },
-    {
-        "question": "Selecione as alternativas verdadeiras referentes ao processo de deliberação.",
-        "choices":
-            [
-                'O chair, ao coletar a call inicial de cada membro da mesa, sempre deve começar pelo juiz menos experiente, progredindo até o mais experiente, e revelando sua call por último',
-                'Caso não seja possível atingir unanimidade sobre certa comparativa e ela precise ser votada, apenas o chair e os wings têm poder de voto, excetuando-se os trainees.',
-                'Normalmente, todas as comparativas bilaterais devem ser discutidas entre o painel. No entanto, caso todos os juízes tenham a mesma call inicial, dispensa-se a deliberação individualizada das comparativas, sendo permitido que o painel tenha uma discussão do debate sob uma visão ampla',
-                'O chair sempre é o principal responsável pela explicação do feedback oral, mas pode convidar seus wings para contribuírem com comentários pontuais'
-            ],
-        "answer": [
-            'O chair, ao coletar a call inicial de cada membro da mesa, sempre deve começar pelo juiz menos experiente, progredindo até o mais experiente, e revelando sua call por último',
-            'Caso não seja possível atingir unanimidade sobre certa comparativa e ela precise ser votada, apenas o chair e os wings têm poder de voto, excetuando-se os trainees.',
-        ]
-    }
-]
 
 
 def init_db():
@@ -328,3 +227,4 @@ def admin_secret():
 
 if __name__ == "__main__":
     app.run()
+
