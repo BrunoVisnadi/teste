@@ -156,7 +156,7 @@ def test(judge_uuid):
             )
         conn.commit()
         conn.close()
-        return "Teste enviado."
+        return "Test successfully submited."
 
     conn.close()
 
@@ -236,6 +236,7 @@ def admin_secret():
 
 if __name__ == "__main__":
     app.run()
+
 
 
 
