@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h2>Judge Test - South Atlantic Debating Championship</h2>
-    <h5><b>Do not refresh the page.</b> The test is expected to take around 30 minutes, but you have up to 2 hours to complete it.</h5>
+    <h2>Teste de Juízes - II Torneio Nacional de Debates</h2>
+    <h5>Não atualize a página. Por favor, complete o teste dentro das próximas 2 horas 30 minutos.</h5>
     <form method="POST">
             {% for question in questions %}
                 <fieldset>
@@ -22,7 +22,7 @@
                 </fieldset>
             {% endfor %}
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">Enviar</button>
     </form>
 
 <script>
@@ -31,4 +31,3 @@ const JUDGE_UUID = "{{ judge_uuid }}";
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
-
