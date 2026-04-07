@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h2>Teste de Juízes - II Torneio Nacional de Debates</h2>
-    <h5>Não atualize a página. Por favor, complete o teste dentro das próximas 2 horas 30 minutos.</h5>
+    <h2>Teste de Juízes - III Copa Nacional de Debates</h2>
+    <h5>Você tem 2 horas e 30 minutos para completar o teste. Não atualize a página.</h5>
     <form method="POST">
             {% for question in questions %}
                 <fieldset>
@@ -16,7 +16,7 @@
                     {% for choice in question.choices %}
                         <label>
                             <input type="checkbox" name="{{ question.id }}" value="{{ choice }}">
-                            {{ choice }}
+                            {{ choice|safe }}
                         </label><br>
                     {% endfor %}
                 </fieldset>
